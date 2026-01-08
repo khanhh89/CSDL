@@ -1,6 +1,8 @@
  drop database if exists hackathon;
 create database hackathon;
 use hackathon;
+set sql_safe_updates = 0;
+set foreign_key_checks = 1;
 create table if not exists Category(
 	category_id varchar(10) primary key,
     category_name varchar(100) not null unique,
